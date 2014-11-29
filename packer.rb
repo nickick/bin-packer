@@ -1,6 +1,6 @@
 class Packer
   class Box
-    attr_reader :center, :dimensions, :vertices, :edge_ordered_pairs
+    attr_reader :center, :dimensions
 
     def initialize(coordinates, dimensions)
       @center = coordinates
