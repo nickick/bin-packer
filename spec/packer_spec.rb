@@ -8,8 +8,9 @@ describe Packer do
 
   describe Packer::Box do
     subject { described_class.new(coordinates, dimensions) }
+
     context "with an origin and dimensions" do
-      let(:coordinates) { { x: 0, y: 0, z: 0} }
+      let(:coordinates) { { x: 0, y: 0, z: 0 } }
       let(:dimensions)  { { width: 2, height: 4, length: 6 } }
 
       describe "initialization" do
@@ -49,6 +50,7 @@ describe Packer do
 
       describe "#move" do
         let(:new_center) { { x: 5, y: 5, z: 5} }
+
         it "should move the box's center to the new coordinates" do
           expect(subject.move(new_center).center).to eq(new_center)
         end
